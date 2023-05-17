@@ -1,5 +1,3 @@
-import '../css/common.css';
-
 const horses = [
   'Secretariat',
   'Eclipse',

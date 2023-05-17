@@ -4,33 +4,33 @@
  * - Функция которая возвращает промис
  */
 
-const makeOrder = dish => {
-  const DELAY = 1000;
+// const makeOrder = dish => {
+//   const DELAY = 1000;
 
-  return new Promise((resolve, reject) => {
-    const passed = Math.random() > 0.5;
+//   return new Promise((resolve, reject) => {
+//     const passed = Math.random() > 0.5;
 
-    setTimeout(() => {
-      if (passed) {
-        resolve(`✅ Вот ваш заказ: ${dish}`);
-      }
+//     setTimeout(() => {
+//       if (passed) {
+//         resolve(`✅ Вот ваш заказ: ${dish}`);
+//       }
 
-      reject('❌ Упс, у нас закончились продукты');
-    }, DELAY);
-  });
-};
+//       reject('❌ Упс, у нас закончились продукты');
+//     }, DELAY);
+//   });
+// };
 
-makeOrder('пирожок').then(onMakeOrderSuccess).catch(onMakeOrderError);
+// makeOrder('пирожок').then(onMakeOrderSuccess).catch(onMakeOrderError);
 
-function onMakeOrderSuccess(result) {
-  console.log('onMakeOrderSuccess');
-  console.log(result);
-}
+// function onMakeOrderSuccess(result) {
+//   console.log('onMakeOrderSuccess');
+//   console.log(result);
+// }
 
-function onMakeOrderError(error) {
-  console.log('onMakeOrderError');
-  console.log(error);
-}
+// function onMakeOrderError(error) {
+//   console.log('onMakeOrderError');
+//   console.log(error);
+// }
 
 /*
  * Промисификация «синхронных» функций
@@ -79,7 +79,7 @@ function onMakeOrderError(error) {
 //   console.log(error);
 // }
 
-// makePromise
+// // makePromise;
 // const makePromise = () => {
 //   return new Promise((resolve, reject) => {
 //     const passed = Math.random() > 0.5;
